@@ -414,6 +414,21 @@ Okay, the breakdown is as follows:
 
 **deleteComment:** This function requires a comment_id as a parameter which is passed along in the DELETE request made to the server to identify the specific comment to be deleted. Then the fetchComments() function is called again to update the comments in the comments array.
 
+
+Finally open `resources\assets\js\app.js` and type:
+```
+require('./bootstrap');
+
+Vue.component('comments',require('./components/comments.vue'));
+
+const app = new Vue({
+    el: '#app'
+
+});
+```
+
+open the command line and run `gulp` to compile assets.
+
 **Results:** Go to the url `/posts` in the browser to use  the application.
 Thats all, if you had any problem with any step, leave a comment below and i will try to answer as soon as i can.
 
