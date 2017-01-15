@@ -188,6 +188,7 @@ Route::group(['middleware' => 'api'], function(){
 ```
 
 Here we defined 4 routes:
+
 1. GET: This route is where we request for the comments of a specific post using the post id. `return \App\Post::findOrFail($id)->comments;`. This line finds a Post model of a specific id, the gets its comment and returns and array of comment objects. This comment property is possible because the Post model extends a Commentable interface.
 
 2. POST: This route handles the creation of a new comment. 
