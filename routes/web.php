@@ -18,6 +18,6 @@ Route::get('/posts', function(){
 
 Route::get('/post/{id}', function($id)
 {
-  $post =  \App\post::findOrFail($id);
+  $post =  \App\Post::findOrFail($id);
   return view('post',compact(['post']));
 });
